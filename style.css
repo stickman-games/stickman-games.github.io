@@ -1947,3 +1947,111 @@ div#gameLoad.fullscreen {
     overflow: hidden;
   }
 }
+
+.play-more-games {
+  text-align: center;
+  padding: 40px 0;
+  margin: 20px 0;
+}
+
+.play-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 20px 40px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(-45deg, #ff416c, #ff4b2b);
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 10px 20px rgba(255, 65, 108, 0.3);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.game-icon {
+  margin-left: 15px;
+  font-size: 1.2em;
+  transition: transform 0.3s ease;
+}
+
+.play-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(255, 65, 108, 0.4);
+}
+
+.play-button:hover .game-icon {
+  transform: rotate(360deg);
+}
+
+.play-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.play-button:hover::before {
+  left: 100%;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.play-button {
+  animation: pulse 2s infinite;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.togglebtn {
+  position: absolute;
+  left: 0;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.logo {
+  display: block;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    width: 300px;
+  }
+}
